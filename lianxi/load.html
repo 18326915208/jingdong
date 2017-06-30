@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#box{width:100px;height:100px;background:#f99;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+//		load(function(){
+//			var oBox=document.getElementById("box");
+//			oBox.onclick=function(){
+//				alert(1);
+//			}
+//		})
+//			
+			
+			$(function(){
+				$("box").onclick=function(){
+					alert(2);
+				}
+			})
+			
+//			function getId(id){
+//				return document.getElementById(id);
+//			}
+			
+			function $(para){
+				if(typeof para=="function"){
+					window.onload=para;	
+				}else if(typeof para=="string"){
+					return document.getElementById(para);
+				}
+			}
+			
+		</script>
+	</body>
+</html>

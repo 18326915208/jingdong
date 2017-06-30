@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			window.onload=function(){	
+//			}
+
+			function load(fn){
+				window.onload=fn;
+			}
+			
+			function a(){
+				return 100;
+			}
+			alert(typeof a);//function
+			if(a()==100){
+				alert(1);
+			}
+			
+		</script>
+		
+	</body>
+</html>

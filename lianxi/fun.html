@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{width: 100px;height: 100px;background:#f99;}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			//函数声明
+//			function fun(){
+//				alert(1);
+//			}
+//			//fun();//主动执行
+//			
+//			oBox.onclick=fun;//通过事件被动执行 函数名后不需加括号
+			
+			//匿名函数
+//			var f=function(){
+//				alert(2);
+//			}
+//			f();
+//			
+//			oBox.onclick=f;
+			
+			//函数自执行-、+、（）、！、~、可使函数变成表达式  （++、--、* / %不可自执行）
+			!function(){
+				alert(3);
+			}();
+			
+			//=号前必须加声明变量 
+			var w=function(){
+				alert(4);
+			}();
+			
+			
+		</script>
+	</body>
+</html>

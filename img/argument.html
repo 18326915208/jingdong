@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			a(1,2);
+//			function a(a,b){
+//				alert(a+b);
+//			};
+
+//			var a=2;
+//			function fun(){
+//				var a=3;
+//				alert(a);
+//			};
+//			fun();//3
+//			alert(a);//2
+			
+			var sum=0;
+			fun(1,2,3,4,5,6);
+			function fun(){
+				for(var i=0;i<arguments.length;i++){
+					sum+=arguments[i];
+				}
+			}
+			fun();
+			alert(sum);
+			
+			var a=1;
+			function saw(){
+				var a=2
+				a=3;
+				alert(a);
+				return function(){
+					var a=4;
+					alert(a);
+					return a;
+				}
+			}
+			saw();//3
+			//alert(a);//1
+			//alert(saw);//弹出function saw(){}整个函数
+			//alert(saw())//弹出3,和 return后的function函数
+			alert(saw()());//弹出3,4,4
+			
+			
+			
+		</script>
+	</body>
+</html>

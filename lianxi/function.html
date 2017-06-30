@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{width:100px;height:100px;background:#f99;}
+			#box1{width:100px;height:100px;background:#f9f;}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box1"></div>
+		<script type="text/javascript">
+			function getId(id){
+				var all=document.getElementsByTagName("*");
+				var id;
+				for(var i=0;i<all.length;i++){
+					if(all[i].id==id){
+						id=all[i];
+					}
+				}
+				return id;
+			}
+			getId("box").className="box";
+			getId("box").onclick=function(){
+				alert(1);
+			}
+			getId("box1").className="box1";
+			getId("box1").onclick=function(){
+				alert(2);
+			}
+		</script>
+	</body>
+</html>
